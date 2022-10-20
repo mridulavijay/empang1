@@ -14,7 +14,7 @@
             <td>{{employee.name}}</td>
             <td>{{employee.position}}</td>
             <td>{{employee.location}}</td>
-            <td><button class="btn btn-warning">Edit</button> 
+            <td><button class="btn btn-warning"(click)="emp_upt(employee)">Edit</button> 
               <button class="btn btn-danger"(click)="emp_del(employee)">Delete</button></td>
         </tr>
         </tbody>

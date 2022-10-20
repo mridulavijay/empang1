@@ -1,0 +1,21 @@
+<div class="card-body"style="background-color:lightblue;">
+    <form #updatef="ngForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+    <input type="text"class="form-control" name="name"#name="ngModel"[(ngModel)]="employee.name">
+          </div>
+    <div class="form-group">
+    <label for="name">Position</label>
+    <input type="text"class="form-control"name="position"#position="ngModel"[(ngModel)]="employee.position">
+</div>
+<div class="form-group">
+    <label for="name">Office Location</label>
+    <input type="text"class="form-control"name="location"#location="ngModel"[(ngModel)]="employee.location">
+</div>
+<div class="form-group">
+    <label for="name">Salary</label>
+    <input type="text"class="form-control"name="salary"#salary="ngModel"[(ngModel)]="employee.salary">
+</div>
+<button type="submit" class="btn btn-primary"(click)="updatedetails()">Update</button>
+</form>
+</div> 
