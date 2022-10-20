@@ -1,0 +1,43 @@
+<div class="container">
+    <form (ngSubmit)="dataemp()">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text"name="name"[(ngModel)]="employee.name"#name="ngModel" placeholder="Your name.."[class.is-invalid]="name.invalid&& name.touched"pattern="^[a-zA-Z]$"required>
+          <small class="text-danger"[class.d-none]="name.valid||name.touched">Enter valid name</small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Position</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="position"[(ngModel)]="employee.position" placeholder="Your Position..">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Office Location</label>
+        </div>
+        <div class="col-75">
+          <input type="text"  name="location"[(ngModel)]="employee.location" placeholder="Your location">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Salary</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="salary" #salary="ngModel"[(ngModel)]="employee.salary"placeholder="Your Salary.."pattern="^\d+$"required>
+          <small class="text-danger"[class.d-none]="salary.valid||salary.touched">Enter valid number</small>
+        </div>
+      </div>
+    <br>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
